@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "md5.h"
 #include "aes.h"
+#include "crc.h"
 #include "sha1.h"
 #include "sha2.h"
 #include "base64.h"
@@ -141,5 +142,8 @@ int main()
     std::string outfn2("out2.bin");
     std::string defaultIV("0123456789abcdeffedcba9876543210");
     md5collgen(prefixfn, outfn1, outfn2, defaultIV);
+
+    std::cout << crc::crc32buf(msg, strlen(msg));
+
     return 0;
 }

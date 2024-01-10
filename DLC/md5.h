@@ -1,10 +1,19 @@
 #pragma once
 #ifndef _MD5_H
 #define _MD5_H
+#include <stdio.h>
 
-typedef unsigned char uint8;
-typedef unsigned long uint32;
-typedef unsigned long long uint64;
+#ifndef uint32
+#define uint32 unsigned long int
+#endif
+
+#ifndef uint8
+#define uint8 unsigned char
+#endif
+
+#ifndef uint64
+#define uint64 unsigned long long
+#endif
 
 class Hash
 {
