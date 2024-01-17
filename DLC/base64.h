@@ -2,6 +2,7 @@
 #ifndef _BASE64_H
 #define _BASE64_H
 #include <string>
+#include <algorithm>
 class base64
 {
 public:
